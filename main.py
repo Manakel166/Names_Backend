@@ -4,4 +4,4 @@ from api import names
 app = application = bottle.default_app()
 
 if __name__ == '__main__':
-    bottle.run(host = '127.0.0.1')
+    bottle.run(host = '0.0.0.0')

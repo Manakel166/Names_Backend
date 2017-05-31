@@ -189,8 +189,8 @@ def delete_handler(name):
 
 @get('/INIT')
 def init_database():
-    _names = set("Pierre","Paul","Jacques")
+    _names.clear()
     response.status = 200
-    return "Database reset to Pierre,Paul,Jacques"
+    return
     
 

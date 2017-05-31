@@ -1,14 +1,22 @@
-Pour Git
+*******************Pour Git************************
 git add .
-
 git commit -m "message commit"
-
 git push origin master
 
-Pour Heroku
+******************Pour Heroku**********************
+------------------Preparation----------------------
+heroku login
 
+__Cloner un projet :
+	heroku git:clone -a api-rest-b2u
+	cd api-rest-b2u
+__Ajouter heroku à un repertoire git
+	heroku git:remote -a api-rest-b2u
+
+-----------------Sauver le travail-----------------
 git add .
-
 git commit -m "message commit"
-
 git push heroku master
+
+----------------Excécution Heroku------------------
+dans "run command" mettre "One-Off Dynos" pour relancer le serveur python

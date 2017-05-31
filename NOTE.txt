@@ -1,0 +1,13 @@
+Pour Git
+
+
+
+
+
+Pour Heroku
+
+git add .
+
+git commit -m "message commit"
+
+git push heroku master

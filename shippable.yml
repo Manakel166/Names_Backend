@@ -1,0 +1,20 @@
+language: python
+python:
+  - 2.7
+  
+build:
+  ci:
+    - "pip install robotframework"
+    - "pip install -U requests"
+    - "pip install -U robotframework-requests"
+    - "pip install urllib3 --upgrade --trusted-host https://pypi.python.org"
+    - "pip install robotframework-xvfb"
+    - "/usr/bin/Xvfb :99 -screen 0 1024x768x24&"
+    - "export DISPLAY=:99"
+    - "cd /root/src/github.com/Manakel166/Names_Backend/"
+    - "python main.py  &"
+    - "echo DOWNLOADING REST API TESTS"
+    - "git fetch https://github.com/Manakel166/Names_Testing.git"
+    - "echo STARTING REST API TESTS"
+    - "cd /root/src/github.com/Manakel166/Names_Backend/Names_Testing/Names_BDD"
+    - "python -m robot.run --variable ExecutionMode:API --xunit /root/src/github.com/Manakel166/Names_Backend/shippable/testresults/RF_API_TESTS.xml Names_REST.robot"

@@ -18,4 +18,4 @@ build:
     - "git clone https://github.com/Manakel166/Names_Testing.git /root/src/github.com/Manakel166/Names_Backend/Tests"
     - "echo STARTING REST API TESTS FOR CYRIL"
     - "cd /root/src/github.com/Manakel166/Names_Backend/Tests/Names_BDD"
-    - "python -m robot.run --variable ExecutionMode:API --xunit /root/src/github.com/Manakel166/Names_Backend/shippable/testresults/RF_API_TESTS.xml Names_REST.robot"
+    - "python -m robot.run --variable api_end_point:http://localhost:5000 --xunit /root/src/github.com/Manakel166/Names_Backend/shippable/testresults/RF_API_TESTS.xml Names_REST.robot"

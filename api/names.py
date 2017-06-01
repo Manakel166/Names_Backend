@@ -178,7 +178,7 @@ def delete_handler(name):
     except KeyError:
         # if name already exists, return 409 Conflict
         print("error status")
-        response.status = 409
+        response.status = 404
         return
 
     _names.remove(name)

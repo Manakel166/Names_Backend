@@ -5,7 +5,7 @@ python:
 
 env:
   global:
-    - APP_NAME=api-rest-b2u
+    - APP_NAME=b2u-rest
     
 build:
   ci:

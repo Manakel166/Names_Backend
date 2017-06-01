@@ -25,4 +25,5 @@ build:
     - "cd /root/src/github.com/Manakel166/Names_Backend/Tests/Names_BDD"
     - "python -m robot.run --variable api_end_point:http://localhost:1026 --xunit /root/src/github.com/Manakel166/Names_Backend/shippable/testresults/RF_API_TESTS.xml Names_REST.robot"
   on_success:
-    - git push -f git@heroku.com:$APP_NAME.git master
+    - "cd /root/src/github.com/Manakel166/Names_Backend/"
+    - "git push -f git@heroku.com:$APP_NAME.git master"

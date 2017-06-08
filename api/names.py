@@ -190,6 +190,7 @@ def delete_handler(name):
 @get('/INIT')
 def init_database():
     _names.clear()
+    _names.add("Woody")
     response.status = 200
     return
     

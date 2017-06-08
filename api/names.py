@@ -4,8 +4,8 @@ from bottle import view
 from bottle import route, run
 from bottle import hook
 
-_names = set()                    # the set of names
-init_database
+_names = set("Woody")                    # the set of names
+
 
 import re, json
 

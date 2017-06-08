@@ -192,7 +192,7 @@ def delete_handler(name):
 @get('/INIT')
 def init_database():
     _names.clear()
-    _names.add(["DevOps")
+    _names.add("DevOps")
     response.status = 200
     return
     

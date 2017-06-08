@@ -26,5 +26,5 @@ build:
     - "python -m robot.run --variable api_end_point:http://localhost:1026 --xunit /root/src/github.com/Manakel166/Names_Backend/shippable/testresults/RF_API_TESTS.xml Names_REST.robot"
   on_success:
     - "cd /root/src/github.com/Manakel166/Names_Backend/"
-    - "git push -f git@heroku.com:$APP_NAME.git master"
+    - echo "git push -f git@heroku.com:$APP_NAME.git master"
     - echo "versionName=$BRANCH.$BUILD_NUMBER" >> $JOB_STATE/Backend_Tested_Image.env

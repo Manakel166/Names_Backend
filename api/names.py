@@ -5,6 +5,7 @@ from bottle import route, run
 from bottle import hook
 
 _names = set()                    # the set of names
+_names.add("DevOps")
 
 
 import re, json

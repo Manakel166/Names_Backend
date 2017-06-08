@@ -4,7 +4,7 @@ from bottle import view
 from bottle import route, run
 from bottle import hook
 
-_names = set("Woody")                    # the set of names
+_names = set(["DevOps"])                    # the set of names
 
 
 import re, json
@@ -191,7 +191,7 @@ def delete_handler(name):
 @get('/INIT')
 def init_database():
     _names.clear()
-    _names.add("Woody")
+    _names.add(['DevOps'])
     response.status = 200
     return
     
